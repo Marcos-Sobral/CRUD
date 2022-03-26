@@ -1,2 +1,1 @@
-oiiiii {{ $names }}
-{{ $id }}
+oiiiii 
