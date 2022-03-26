@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('jogos')->group(function(){
+    Route:get('/', [Jogos Contreller::class])
+
+});
+
 Route::get('/jogos', [JogosController::class, 'index']);
 
 //Route::view('/jogo', 'jogos', ['name' => 'Debora']);
