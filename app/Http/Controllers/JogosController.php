@@ -24,5 +24,11 @@ class JogosController extends Controller
         return redirect()->route('jogos-index');
     }
 
+    public function edit($id)
+    {
+        $jogos = Jogo::where('id',$id)->first();
+        dd($jogos);
+    }
+
 }
 
