@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class jogo extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+
+        'nome',
+        'categoria',
+        'ano_criacao',
+        'valor'
+
+    ];
 }

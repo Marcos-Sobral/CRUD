@@ -19,11 +19,15 @@ Route::get('/', function () {
 });
 
 Route::prefix('jogos')->group(function(){
-    Route:get('/', [Jogos Contreller::class])
-
+    Route::get('/', [JogosController::class, 'index'])->name('jogos-index');
+    Route::get('/create', [JogosController::class, 'create'])->name('jogos-create');
 });
 
-Route::get('/jogos', [JogosController::class, 'index']);
+Route::fallback(function(){
+    return 'Erro';
+});
+
+//Route::get('/jogos', [JogosController::class, 'index']);
 
 //Route::view('/jogo', 'jogos', ['name' => 'Debora']);
 
@@ -32,6 +36,3 @@ Route::get('/jogos', [JogosController::class, 'index']);
 })->where(['id' => '[0-9]+','name' => '[a-z]+']);
 */
 
-Route::fallback(function(){
-    return 'Erro';
-});
