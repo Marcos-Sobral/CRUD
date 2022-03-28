@@ -20,8 +20,9 @@
               </div> 
       </div>
 
-      <form action="{{ route('jogos-store') }}" method="POST"> 
+      <form action="{{ route('jogos-update', ['id'=>$jogos->id]) }}" method="POST"> 
        @csrf  
+       @method('PUT')
        
           <div class="form-group">
            
