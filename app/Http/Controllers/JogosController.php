@@ -29,7 +29,7 @@ class JogosController extends Controller
         $jogos = Jogo::where('id',$id)->first();
         if(!empty ($jogos))
         {
-            dd($jogos);
+            return view('jogos.edit', ['jogos'=>$jogos]);
         }
        
         else
