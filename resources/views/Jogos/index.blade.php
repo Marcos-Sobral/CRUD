@@ -3,17 +3,14 @@
 
 @section('content')
 
+<livewire:header />
 
     <div class="container mt-5">
     <div class="row">
 
        <div class="col-sm-10">
          <h1>Listagem de Projetos</h1>
-       </div>
-
-       <div class="col-sm-2">
-         <a href="{{ route ('jogos-create') }}" class="btn btn-success">Novo Jogo</a>
-       </div>     
+       </div>    
 
     </div>  
 

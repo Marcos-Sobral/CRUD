@@ -3,21 +3,14 @@
 
 @section('content')
 
+<livewire:header />
+
     <div class="container mt-5">
 
       <div class="row">
-
         <div class="col-sm-9">
             <h1>Editando dados do jogo</h1>
           </div>
-
-              <div class="col-sm-1">
-                <a href="{{ route ('jogos-index') }}" class="btn btn-dark">Inicio</a>
-              </div> 
-
-              <div class="col-sm-2">
-                <a href="{{ route ('jogos-create') }}" class="btn btn-success">Novo Jogo</a>
-              </div> 
       </div>
 
       <form action="{{ route('jogos-update', ['id'=>$jogos->id]) }}" method="POST"> 

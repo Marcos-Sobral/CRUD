@@ -3,6 +3,8 @@
 
 @section('content')
 
+<livewire:header />
+
     <div class="container mt-5">
 
       <div class="row">
@@ -10,10 +12,6 @@
         <div class="col-sm-10">
             <h1>Crie um novo jogo</h1>
           </div>
-
-              <div class="col-sm-2">
-                <a href="{{ route ('jogos-index') }}" class="btn btn-dark">Inicio</a>
-              </div> 
       </div>
 
       <form action="{{ route('jogos-store') }}" method="POST"> 
