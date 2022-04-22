@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::prefix('jogos')->group(function(){
     Route::get('/', [JogosController::class, 'index'])->name('jogos-index');
+    Route::get('/login', [JogosController::class, 'login'])->name('jogos-login');
+    Route::get('/grid', [JogosController::class, 'grid'])->name('jogos-grid');
     Route::get('/teste', Header::class);
     Route::get('/create', [JogosController::class, 'create'])->name('jogos-create');
     Route::post('/', [JogosController::class, 'store'])->name('jogos-store');

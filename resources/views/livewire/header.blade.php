@@ -4,7 +4,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
     *
-    {
+    body{
         margin: 0;
         padding: 0;
         border: 0;
@@ -14,6 +14,8 @@
 
     header
     {
+        position: fixed;
+        top: 0px;
         height: 80px;
         width: 100%;
         background-color: #fff;
@@ -23,6 +25,16 @@
         padding: 0 60px;
         box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.07);
     }
+
+    main
+        {
+            background-color: #fff;
+            width: 80%;
+            margin: 8vw auto;
+            padding: 10%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.07);
+        }
 
     header .nome
     {
@@ -54,14 +66,15 @@
         background-color: rgb(8, 77, 110);
         color: #fff;
     }
+
 </style>
 
 <header>
-    <a href="#" class="nome">CRUD</a>
+    <a href="{{ route ('jogos-index') }}" class="nome">CRUD</a>
     <nav>
         <a href="{{ route ('jogos-index') }}" class="botao">Inicio</a>
         <a href="{{ route ('jogos-create') }}" class="botao">Criar Jogos</a>
-        <a href="#" class="botao">Pesquisar</a>
+        <a href="{{ route ('jogos-login') }}" class="botao">Login</a>
         <a href="{{ route ('jogos-index') }}" class="botao">Ver Jogos</a>
     </nav>
 </header>

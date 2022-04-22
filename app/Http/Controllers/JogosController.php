@@ -13,6 +13,16 @@ class JogosController extends Controller
        return view('jogos.index', ['jogos'=>$jogos]);
     }
 
+    public function login()
+    {
+       return view('jogos.login');
+    }
+
+    public function grid()
+    {
+       return view('jogos.grid');
+    }
+
     public function create()
     {   
         return view('jogos.create');
