@@ -54,14 +54,72 @@
         background-color: rgb(8, 77, 110);
         color: #fff;
     }
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+    }
+
+    li {
+    padding: 40px 16px;
+    display: table-cell;
+    text-align: center;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 2.5px;
+    }
+
+    li a:hover {
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    }
+
+
+    /*Edit starts here*/
+    li {
+    position:relative;
+    }
+
+    li::after {
+        content: '';
+        display: block;
+        width: 0;
+        position:absolute;
+        left:50%;
+        height: 2px;
+        background: #0077ff;
+        transition: cubic-bezier(.77,0,.18,1) 1s;
+    }
+
+    li:hover::after {
+        width: 80%;
+        left: 10%;
+    }
+
+    li {
+    transition: cubic-bezier(.77,0,.18,1) 1s;
+    }
 </style>
 
 <header>
     <a href="#" class="nome">CRUD</a>
     <nav>
-        <a href="{{ route ('jogos-index') }}" class="botao">Inicio</a>
-        <a href="{{ route ('jogos-create') }}" class="botao">Criar Jogos</a>
-        <a href="#" class="botao">Pesquisar</a>
-        <a href="{{ route ('jogos-index') }}" class="botao">Ver Jogos</a>
+    <ul>
+      <li style="float: right;"><a href="{{ route ('jogos-index') }}" class="botao">Inicio</a></li>
+      <li style="float: right;"><a href="{{ route ('jogos-create') }}" class="botao">Criar Jogos</a></li>
+      <li style="float: right;"><a href="{{ route ('jogos-index') }}" class="botao">Ver Jogos</a></li>
+    </ul>
+        
     </nav>
 </header>
